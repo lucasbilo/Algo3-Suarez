@@ -1,0 +1,5 @@
+Implementar un modelo de clases para el dominio de una planilla de calculo (tipo Calc de Openoffice o Excel de MS)
+- implementar una planilla con celdas que permitan almacenar valores (ejemplo de celdas "A1", "C3", etc)
+- implementar la funcionalidad de definir rangos verticales, horizontales y diagonales sobre esa planilla (ejemplo un rango desde la celda "A2" hasta la "C2")
+- implementar la funcionalidad para poder calcular, sobre un rango, suma, promedio, count (cantidad de celdas no vacias)
+

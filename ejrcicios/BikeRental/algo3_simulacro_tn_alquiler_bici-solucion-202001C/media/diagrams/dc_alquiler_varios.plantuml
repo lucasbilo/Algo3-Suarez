@@ -1,0 +1,9 @@
+@startuml
+
+TestCase -> Client: saldoAdeudado()
+loop [acumular]
+        Client -> Alquier: deuda()
+        return adeudado
+end
+
+@enduml 

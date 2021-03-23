@@ -1,0 +1,21 @@
+@startuml
+
+TestCase -> Bicicleta ** : con(precioPorDia, precioDiario Double)
+return unaBici
+TestCase -> AlquilerDiario ** : rentar(unaBici)
+return unAlquilerDiario
+TestCase -> Client: agregar(AlquilerDiario)
+
+TestCase -> Client: saldoAdeudado()
+return precioDeAlquilerPorDia
+Client -> AlquilerDiario: deuda()
+
+AlquilerDiario -> Bici ** : porDia
+return unaBiciPorDia
+
+AlquilerDiario -> AlquilerPeriodo ** : rentarPor(unaBiciPorDia, 1)
+
+AlquilerPeriodo -> Bicicleta: deuda()
+return precioPorDia * 1
+
+@enduml 

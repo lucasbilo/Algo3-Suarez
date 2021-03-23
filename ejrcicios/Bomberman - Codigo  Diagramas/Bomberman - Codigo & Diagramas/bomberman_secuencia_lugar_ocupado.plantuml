@@ -1,0 +1,12 @@
+@startuml
+
+hide footbox
+title Bomberman da un paso a un lugar ocupado
+
+Usuario -> Bomberman: moverA(nuevoLugar : Lugar2)
+Bomberman -> Lugar2: ocupadoPor(self)
+Lugar2 -> Pared: chocar(unBomberman)
+create PosicionOcupada
+Pared -> PosicionOcupada : signal
+
+@enduml

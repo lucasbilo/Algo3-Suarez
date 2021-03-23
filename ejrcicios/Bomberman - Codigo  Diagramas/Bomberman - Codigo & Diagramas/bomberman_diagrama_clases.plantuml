@@ -1,0 +1,37 @@
+@startuml
+
+hide circle
+skinparam classAttributeIconSize 0
+
+class Bomberman {
+        + Bomberman: nace(unLugar : Lugar2)
+        + boolean: estaEn:(unLugar : Lugar2)
+        + moverA( unLugar : Lugar2)
+}
+
+class Lugar2 {
+        + Lugar2: con( unOcupante : Ocupante)
+        + Ocupante: ocupadoPor( unOcupante : Ocupante)
+        
+}
+
+interface Ocupante {
+        + Ocupante: cochar(unOcupante : Ocupante)
+}
+
+class Pared {
+        + Ocupante: cochar(unOcupante : Ocupante)
+}
+
+class Nada {
+        + Ocupante: cochar(unOcupante : Ocupante)
+}
+
+Bomberman o-- "1" Lugar2: posicion
+
+Lugar2 o-- "1" Ocupante: ocupante
+
+Ocupante <|.. Pared
+Ocupante <|.. Nada
+
+@enduml

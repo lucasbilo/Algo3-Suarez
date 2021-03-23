@@ -1,0 +1,13 @@
+@startuml
+
+hide footbox
+title Bomberman da un paso a un lugar vacio
+
+actor Usuario
+
+Usuario -> Bomberman: moverA(nuevoLugar)
+Bomberman -> Lugar2: ocupadoPor(unBomberman)
+Lugar2 -> Nada: chocar(unBomberman)
+return [ocupante]
+
+@enduml
